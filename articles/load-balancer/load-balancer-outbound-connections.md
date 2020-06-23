@@ -86,6 +86,9 @@ You can combine the scenarios described in the preceding sections to achieve a p
 
 An example is an Azure Resource Manager deployment where the application relies heavily on outbound connections to a limited number of destinations but also receives inbound flows over a Load Balancer frontend. In this case, you can combine scenarios 1 and 2 for relief. For additional patterns, review [Managing SNAT exhaustion](#snatexhaust).
 
+>[!IMPORTANT] 
+>With introduction of Azure Firewall, you can integrate it with your existing virtual network with an Azure Standard Load Balancer to configure outbound connectivity without having assign a public IP to either the instance or the Azure Load Balancer.
+
 ### <a name="multife"></a> Multiple frontends for outbound flows
 
 #### Load Balancer Standard
@@ -258,3 +261,4 @@ If an NSG blocks health probe requests from the AZURE_LOADBALANCER default tag, 
 - Learn more about [Standard Load Balancer](load-balancer-standard-overview.md).
 - Learn more about [network security groups](../virtual-network/security-overview.md).
 - Learn about some of the other key [networking capabilities](../networking/networking-overview.md) in Azure.
+- Learn more about [Integrating Azure Firewall with Azure Standard Load Balancer](../firewall/integrate-lb.md)
